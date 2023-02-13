@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "info@lillymountain.com",
+      "properties": {
+        "fullname": "Plone Mountain Site",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "plone-mountain-site"
+    }
+  ],
+    "team": [
+  ]
+}
