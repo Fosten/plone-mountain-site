@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2023-02-13 23:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,39 @@ msgstr ""
 "Language-Name: Portugu&es do Brasil\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: plone_mountain_site/vocabularies/__init__.py:11
+msgid "Education"
+msgstr ""
+
+#: plone_mountain_site/vocabularies/__init__.py:9
+msgid "Government"
+msgstr ""
+
+#: plone_mountain_site/profiles.zcml:22
+msgid "Initial content for our website."
+msgstr ""
+
+#: plone_mountain_site/vocabularies/__init__.py:10
+msgid "NGO"
+msgstr ""
+
+#: plone_mountain_site/profiles.zcml:22
+msgid "Plone Mountain Site: Initial content"
+msgstr ""
+
+#: plone_mountain_site/profiles.zcml:13
+msgid "Plone Mountain Site: Install"
+msgstr ""
+
+#: plone_mountain_site/profiles.zcml:30
+msgid "Plone Mountain Site: Uninstall"
+msgstr ""
+
+#: plone_mountain_site/profiles.zcml:13
+msgid "Policy package to install our site"
+msgstr ""
+
+#: plone_mountain_site/profiles.zcml:30
+msgid "Uninstall Plone Mountain Site setup."
+msgstr ""
