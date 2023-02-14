@@ -2,11 +2,12 @@
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from plone_mountain_site.testing import PLONE_MOUNTAIN_SITE_INTEGRATION_TESTING  # noqa: E501
+from plone_mountain_site.testing import (
+    PLONE_MOUNTAIN_SITE_INTEGRATION_TESTING,
+} # noqa: E501
 from Products.CMFPlone.utils import get_installer
 
 import unittest
-
 
 class TestSetup(unittest.TestCase):
     """Test that plone_mountain_site is properly installed."""
