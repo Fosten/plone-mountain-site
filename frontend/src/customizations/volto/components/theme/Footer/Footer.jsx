@@ -28,16 +28,16 @@ const Footer = ({ intl }) => (
     <Container>
       <Segment basic inverted color="grey" className="discreet">
         <div className="footersitemap">
-          <div className="footercol1"></div>
-          <div className="footercol2"></div>
-          <div className="footercol3">
-            <div className="logo">
+          <div className="footercol1"><h2>Gardens</h2></div>
+          <div className="footercol2"><h2>Chickens</h2></div>
+          <div className="footercol3"><h2>Camp</h2></div>
+          <div className="footercol4">
+          <div className="logo">
               <Logo />
               <a href="/">Lilly Mountain</a>
               <div className="slogan">"Homesteading made simple."</div>
             </div>
           </div>
-          <div className="footercol4"></div>
         </div>
       </Segment>
       <Segment basic inverted color="grey" className="discreet">
@@ -45,7 +45,7 @@ const Footer = ({ intl }) => (
         <div className="footerbar">
           <div className="companyinfo">
             <div className="email">
-              <a href="mailto:info@happybaseball.com">info@happybaseball.com</a>
+              <a href="mailto:info@lillymountain.com">info@lillymountain.com</a>
             </div>
             <div className="youtube"></div>
             <div className="twitter">
