@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import {
-  Anontools,
   LanguageSelector,
   Logo,
   Navigation,
@@ -53,7 +52,8 @@ class Header extends Component {
           <div className="header">
             <div className="logo-nav-wrapper">
               <div className="logo">
-                <Logo /><a href="/">Lilly Mountain</a>
+                <Logo />
+                <a href="/">Lilly Mountain</a>
               </div>
               <Navigation pathname={this.props.pathname} />
             </div>
