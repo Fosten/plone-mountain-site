@@ -28,11 +28,17 @@ const Footer = ({ intl }) => (
     <Container>
       <Segment basic inverted color="grey" className="discreet">
         <div className="footersitemap">
-          <div className="footercol1"><h2>Gardens</h2></div>
-          <div className="footercol2"><h2>Chickens</h2></div>
-          <div className="footercol3"><h2>Camp</h2></div>
+          <div className="footercol1">
+            <h2>Gardens</h2>
+          </div>
+          <div className="footercol2">
+            <h2>Chickens</h2>
+          </div>
+          <div className="footercol3">
+            <h2>Camp</h2>
+          </div>
           <div className="footercol4">
-          <div className="logo">
+            <div className="logo">
               <Logo />
               <a href="/">Lilly Mountain</a>
               <div className="slogan">"Homesteading made simple."</div>

@@ -1,58 +1,98 @@
-.logo {font-size:22px;}
+.logo {
+  font-size: 22px;
+}
+
 .logo img.ui.image {
-    display:inline-block; 
-    width:100px;
+  display: inline-block;
+  width: 100px;
 }
 
 /* Footer */
 .ui.inverted.grey.segment {
-    line-height:2em;
-    font-size:1.2em;
-    display:flex;
-    align-items:center;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  line-height: 2em;
 }
+
 #footer {
-    font-size: 10px;
-    text-shadow: 0.5px 0.5px 1px black;
+  font-size: 10px;
+  text-shadow: 0.5px 0.5px 1px black;
 }
-#footer h2 {margin: 0;}
+
+#footer h2 {
+  margin: 0;
+}
+
 #footer a {
-    display:inline-block;
-    padding: .25em;
-    color:white;
-    border-bottom:none;
+  display: inline-block;
+  padding: 0.25em;
+  border-bottom: none;
+  color: white;
 }
+
 #footer a:hover {
-    background:white;
-    color:#006b96 !important;
-    border-radius:1em;
-    text-shadow: none;
+  background: white;
+  border-radius: 1em;
+  color: #006b96 !important;
+  text-shadow: none;
 }
-#footer .footercol4 img {width: 110px; background: white;}
-#footer .footercol4 img:hover {background: grey;}
-#footer .ui.segment {margin:0; padding:0;}
+
+#footer .footercol4 img {
+  width: 110px;
+  background: white;
+}
+
+#footer .footercol4 img:hover {
+  background: grey;
+}
+
+#footer .ui.segment {
+  padding: 0;
+  margin: 0;
+}
+
 .footersitemap {
-    display:flex;
-    width:100%;
-    border-bottom:
-    thin solid white;
-    padding-bottom:1em;
+  display: flex;
+  width: 100%;
+  padding-bottom: 1em;
+  border-bottom: thin solid white;
 }
+
 .footersitemap ul {
-    list-style-type:none;
-    padding-left:0;
-    margin:0;
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
 }
-.footercol1 {width:25%;}
-.footercol2, .footercol3, .footercol4 {flex-grow:1;}
+
+.footercol1 {
+  width: 25%;
+}
+
+.footercol2,
+.footercol3,
+.footercol4 {
+  flex-grow: 1;
+}
+
 .footerbar {
-    display: flex;
-    width:100%;
-    padding-top:.5em;
+  display: flex;
+  width: 100%;
+  padding-top: 0.5em;
 }
+
 .companyinfo {
-    display: flex;
-    width:100%;
+  display: flex;
+  width: 100%;
 }
-.email {width:25%;}
-.youtube, .twitter, .facebook, .accessibility {flex-grow:1;}
+
+.email {
+  width: 25%;
+}
+
+.youtube,
+.twitter,
+.facebook,
+.accessibility {
+  flex-grow: 1;
+}
