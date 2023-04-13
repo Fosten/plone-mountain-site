@@ -29,13 +29,52 @@ const Footer = ({ intl }) => (
       <Segment basic inverted color="grey" className="discreet">
         <div className="footersitemap">
           <div className="footercol1">
-            <h2>Gardens</h2>
+            <h2>
+              <a href="/gardens">Gardens</a>
+            </h2>
+            <ul>
+              <li>
+                <a href="/gardens/vegetables">Vegetables</a>
+              </li>
+              <li>
+                <a href="/gardens/flowers">Flowers</a>
+              </li>
+              <li>
+                <a href="/gardens/crop-rotation">Crop Rotation</a>
+              </li>
+            </ul>
           </div>
           <div className="footercol2">
-            <h2>Chickens</h2>
+            <h2>
+              <a href="/chickens">Chickens</a>
+            </h2>
+            <ul>
+              <li>
+                <a href="/chickens/egg-layers">Egg Layers</a>
+              </li>
+              <li>
+                <a href="/chickens/meat-broilers">Meat Broilers</a>
+              </li>
+              <li>
+                <a href="/chickens/free-range">Free Range</a>
+              </li>
+            </ul>
           </div>
           <div className="footercol3">
-            <h2>Camp</h2>
+            <h2>
+              <a href="/orchards">Orchards</a>
+            </h2>
+            <ul>
+              <li>
+                <a href="/orchards/apples">Apples</a>
+              </li>
+              <li>
+                <a href="/orchards/blueberries">Blueberries</a>
+              </li>
+              <li>
+                <a href="/orchards/maple">Maple</a>
+              </li>
+            </ul>
           </div>
           <div className="footercol4">
             <div className="logo">
