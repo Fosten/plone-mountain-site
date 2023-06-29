@@ -1,3 +1,5 @@
+@import 'site/components/blocks/teaser.less';
+
 .logo {
   font-size: 22px;
 }
