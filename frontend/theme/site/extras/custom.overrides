@@ -1,5 +1,14 @@
 @import 'site/components/blocks/teaser.less';
 
+body {
+  background: #f8fff0 !important;
+}
+
+/* Header */
+.ui.basic.segment.header-wrapper{
+  background: #F6FAF9;
+}
+
 .logo {
   font-size: 22px;
 }
@@ -9,8 +18,34 @@
   width: 100px;
 }
 
+/* Breadcrumbs */
+.ui.secondary.segment {
+  background: #fffff0 !important;
+}
+
+/* Content */
+#page-document {
+  background: white;
+  padding: 2em;
+  border-radius: 2em;
+}
+#page-document a .content {
+  color: #007eb1;
+}
+#page-document a:hover .content {
+  text-decoration: underline;
+}
+
+/* Blocks */
+.block.slider .highlight-image-wrapper img,
+.grid-teaser-item.default .grid-image-wrapper img {
+  border: 1px solid black;
+  border-radius:2em;
+}
+
 /* Footer */
-.ui.inverted.grey.segment {
+.ui.inverted.segment {
+  background-color: #8fbc8f! important;
   display: flex;
   align-items: center;
   font-size: 1.2em;
