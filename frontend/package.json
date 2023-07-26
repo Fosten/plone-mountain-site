@@ -3,6 +3,10 @@
   "description": "Plone 6 website for Mountain",
   "license": "MIT",
   "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "src/addons/volto-mountain-theme"
+  ],
   "scripts": {
     "start": "razzle start",
     "postinstall": "make omelette && make patches",
@@ -28,7 +32,9 @@
     "@eeacms/volto-accordion-block",
     "@kitconcept/volto-blocks-grid",
     "@kitconcept/volto-slider-block",
-    "@eeacms/volto-matomo"
+    "@eeacms/volto-matomo",
+    "@Fosten/volto-mountain-theme",
+    "@Fosten/volto-farmOS"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -131,11 +137,12 @@
     "node": "^14 || ^16"
   },
   "dependencies": {
+    "@Fosten/volto-farmOS": "Fosten/volto-farmOS",
     "@eeacms/volto-accordion-block": "*",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-blocks-grid": "*",
     "@kitconcept/volto-slider-block": "*",
-    "@plone/volto": "16.11.0"
+    "@plone/volto": "16.21.3"
   },
   "devDependencies": {
     "@plone/scripts": "^2.1.5",
