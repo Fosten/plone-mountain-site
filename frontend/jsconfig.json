@@ -1,6 +1,10 @@
 {
     "compilerOptions": {
-        "paths": {},
+        "paths": {
+            "@Fosten/volto-mountain-theme": [
+                "addons/volto-mountain-theme/src"
+            ]
+        },
         "baseUrl": "src"
     }
 }

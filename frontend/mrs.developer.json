@@ -1,1 +1,8 @@
-{}
+{
+    "volto-mountain-theme": {
+        "url": "https://github.com/Fosten/volto-mountain-theme.git",
+        "path": "src",
+        "package": "@Fosten/volto-mountain-theme",
+        "branch": "main"
+    }
+}
