@@ -16,9 +16,8 @@ USER node
 WORKDIR /build
 RUN <<EOT
     make install
+    yarn build
 EOT
-
-RUN yarn build
 
 FROM base
 

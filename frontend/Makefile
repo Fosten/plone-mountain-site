@@ -52,7 +52,7 @@ install: ## Install the frontend
 	@echo "Install frontend"
 	$(MAKE) omelette
 	$(MAKE) preinstall
-	yarn install --network-timeout 1000000
+	yarn install
 
 .PHONY: preinstall
 preinstall: ## Preinstall task, checks if missdev (mrs-developer) is present and runs it
