@@ -138,7 +138,7 @@ start-acceptance-servers: build-acceptance-servers ## Start Acceptance Servers
 	@echo "Start acceptance backend"
 	@docker run --rm -p 55001:55001 --name plone-mountain-site-backend-acceptance -d fosten/plone-mountain-site-backend:acceptance
 	@echo "Start acceptance frontend"
-	@docker run --rm -p 3000:3000 --name plone-mountain-site-frontend-acceptance --link plone-mountain-site-backend-acceptance:backend -e RAZZLE_API_PATH=http://localhost:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d fosten/plone-mountain-site-frontend:acceptance
+	@docker run --rm -p 3000:3000 --name plone-mountain-site-frontend-acceptance --link plone-mountain-site-backend-acceptance:backend -e RAZZLE_API_PATH=http://127.0.0.1:55001/plone -e RAZZLE_INTERNAL_API_PATH=http://backend:55001/plone -d fosten/plone-mountain-site-frontend:acceptance
 
 .PHONY: stop-acceptance-servers
 stop-acceptance-servers: ## Stop Acceptance Servers
