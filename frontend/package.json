@@ -5,7 +5,8 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "src/addons/volto-mountain-theme"
+    "src/addons/volto-mountain-theme",
+    "src/addons/volto-farmOS"
   ],
   "scripts": {
     "start": "razzle start",
@@ -136,7 +137,6 @@
     "node": "^16 || ^18"
   },
   "dependencies": {
-    "@Fosten/volto-farmOS": "Fosten/volto-farmOS",
     "@eeacms/volto-accordion-block": "*",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-slider-block": "*",

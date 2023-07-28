@@ -4,5 +4,11 @@
         "path": "src",
         "package": "@Fosten/volto-mountain-theme",
         "branch": "main"
+    },
+    "volto-farmOS": {
+        "url": "https://github.com/Fosten/volto-farmOS.git",
+        "path": "src",
+        "package": "@Fosten/volto-farmOS",
+        "branch": "main"
     }
 }

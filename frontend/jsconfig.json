@@ -3,6 +3,9 @@
         "paths": {
             "@Fosten/volto-mountain-theme": [
                 "addons/volto-mountain-theme/src"
+            ],
+            "@Fosten/volto-farmOS": [
+                "addons/volto-farmOS/src"
             ]
         },
         "baseUrl": "src"

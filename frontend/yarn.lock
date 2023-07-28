@@ -5,14 +5,14 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@Fosten/volto-farmOS@Fosten/volto-farmOS":
-  version: 0.1.0
-  resolution: "@Fosten/volto-farmOS@https://github.com/Fosten/volto-farmOS.git#commit=aa05d86fa7e993e692d98e8fec43441fbed1dacd"
+"@Fosten/volto-farmOS@workspace:src/addons/volto-farmOS":
+  version: 0.0.0-use.local
+  resolution: "@Fosten/volto-farmOS@workspace:src/addons/volto-farmOS"
   dependencies:
     "@farmOS/farmOS.js": "Fosten/farmOS.js#scope-secret"
-  checksum: 93702758f9b6039353f4f963bbe3efa3f53a75df49813f2dfd2434be22e6af38814cdcc996ec4a54c09f5c498c3f82443d839e3879379d6cb8605cc872a8a83e
-  languageName: node
-  linkType: hard
+    "@plone/scripts": "*"
+  languageName: unknown
+  linkType: soft
 
 "@Fosten/volto-mountain-theme@workspace:src/addons/volto-mountain-theme":
   version: 0.0.0-use.local
@@ -12209,7 +12209,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "frontend@workspace:."
   dependencies:
-    "@Fosten/volto-farmOS": Fosten/volto-farmOS
     "@eeacms/volto-accordion-block": "*"
     "@eeacms/volto-matomo": "*"
     "@kitconcept/volto-slider-block": "*"
