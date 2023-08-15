@@ -22,6 +22,8 @@ export default function applyConfig(config) {
     isMultilingual: false,
     supportedLanguages: ['en'],
     defaultLanguage: 'en_US',
+    matomoSiteId: '2',
+    matomoUrlBase: 'https://stats.lillymountain.com/',
   };
   return config;
 }
