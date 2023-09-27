@@ -2,12 +2,12 @@ version: "3.3"
 services:
 
   frontend:
-    image: ghcr.io/fosten/plone-mountain-site-frontend:latest
+    image: ghcr.io/fosten/plone-mountain-site-frontend:${STACK_PARAM:-latest}
     networks:
       - traefik-public
       - traefik-mountain
     environment:
-      RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
+      RAZZLE_INTERNAL_API_PATH: http://lillymountain-com_backend:8080/Plone
     ports:
       - "3003:3000"
     depends_on:
@@ -32,7 +32,7 @@ services:
         - traefik.http.routers.mountain-frontend.middlewares=gzip
 
   backend:
-    image: ghcr.io/fosten/plone-mountain-site-backend:latest
+    image: ghcr.io/fosten/plone-mountain-site-backend:${STACK_PARAM:-latest}
     networks:
       - traefik-public
       - traefik-mountain
