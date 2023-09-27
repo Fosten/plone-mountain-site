@@ -25,7 +25,7 @@ services:
         - traefik.http.services.testing_mountain-frontend.loadbalancer.server.port=3000
         # MIDDLEWARES
         ### ClassicUI Access Authentication
-        - traefik.http.middlewares.testing_mountain-frontend-auth.basicauth.users=admin:$$2y$$05$$hGP72w.Rgky4RK7FrN9km.UpdwwHqB8gJNp8TQ4s4qDK8LxjfISl6
+        - traefik.http.middlewares.testing_mountain-frontend-auth.basicauth.users=testing:$$2y$$05$$hGP72w.Rgky4RK7FrN9km.UpdwwHqB8gJNp8TQ4s4qDK8LxjfISl6
         # HOSTS: Main
         - traefik.http.routers.testing_mountain-frontend.rule=Host(`testing.lillymountain.com`)
         - traefik.http.routers.testing_mountain-frontend.entrypoints=websecure
