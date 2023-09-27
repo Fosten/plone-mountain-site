@@ -1,10 +1,11 @@
-name: Backend CI
+name: Backend testing CI
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "backend/**"
-      - ".github/workflows/backend.yml"
   workflow_dispatch:
 
 jobs:
@@ -154,7 +155,8 @@ jobs:
           remote_port: ${{ vars.DEPLOY_PORT }}
           remote_user: ${{ vars.DEPLOY_USER }}
           remote_private_key: ${{ secrets.DEPLOY_SSH }}
-          stack_file: devops/stacks/lillymountain.com.yml
-          stack_name: lillymountain-com
+          stack_file: devops/stacks/testing.lillymountain.com.yml
+          stack_name: testing-lillymountain-com
+          stack_param: ${{ github.ref_name }}
           env_file: ${{ secrets.ENV_FILE }}
           deploy_timeout: 480
