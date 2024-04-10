@@ -2219,12 +2219,12 @@ __metadata:
 
 "@farmOS/farmOS.js@Fosten/farmOS.js#scope-secret":
   version: 2.0.0-beta.16
-  resolution: "@farmOS/farmOS.js@https://github.com/Fosten/farmOS.js.git#commit=836e7f663e6f3ee080a3000fb71a8891b41d5a00"
+  resolution: "@farmOS/farmOS.js@https://github.com/Fosten/farmOS.js.git#commit=763d4c71902a1ac8754488897911416026081864"
   dependencies:
     axios: ^0.25.0
     ramda: ^0.27.1
     uuid: ^8.3.2
-  checksum: 6674508ce78f9213f8e7f9001312628850ab3c6b5c145e5761d9964616e1ee34298032bef1b0758d8a1d07d207751fca49c4730902b7ae19aa29d549004851d7
+  checksum: b01a0314b8d1b2ec656069a0e3c0d9ae83b64b8447eefa3ae23350035d3318c293944ee0a0615c2ad87e74e15ddf7b9126b98e0143b76e2a49c99c0b4e4690eb
   languageName: node
   linkType: hard
 
