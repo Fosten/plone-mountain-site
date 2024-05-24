@@ -32,6 +32,7 @@
   "addons": [
     "@eeacms/volto-accordion-block",
     "@kitconcept/volto-slider-block",
+    "volto-form-block",
     "@eeacms/volto-matomo",
     "@Fosten/volto-mountain-theme",
     "@Fosten/volto-farmOS"
@@ -231,7 +232,9 @@
     "universal-cookie-express": "4.0.3",
     "url": "^0.11.3",
     "use-deep-compare-effect": "1.8.1",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "volto-form-block": "^3.8.3",
+    "volto-subblocks": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

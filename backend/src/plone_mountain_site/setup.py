@@ -49,6 +49,7 @@ setup(
         "Plone",
         "prettyconf",
         "plone.api",
+        "collective.volto.formsupport",
     ],
     extras_require={
         "test": [
