@@ -3569,9 +3569,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/registry@npm:1.5.6":
-  version: 1.5.6
-  resolution: "@plone/registry@npm:1.5.6"
+"@plone/registry@npm:1.5.7":
+  version: 1.5.7
+  resolution: "@plone/registry@npm:1.5.7"
   dependencies:
     crypto-random-string: 3.2.0
     debug: 4.3.2
@@ -3583,7 +3583,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: fb6e86bec72bcc270209d6dc98c8d7ff456cb798a2e398bbe731514a24806a75dd854ba8dd021b4283e6187e9dae1dce54a4fadf83baf127373306962d9943ed
+  checksum: f356d25cc9f12f3f1acc83e1f8d3f84ba817a1b466739d6b50d035dfc9f69273cf72ea3ecb16dcd2eb9fc5f9c2902fc04af3214c00812a5b00d8c0b7cfa317f7
   languageName: node
   linkType: hard
 
@@ -3615,9 +3615,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/types@npm:1.0.0-alpha.11":
-  version: 1.0.0-alpha.11
-  resolution: "@plone/types@npm:1.0.0-alpha.11"
+"@plone/types@npm:1.0.0-alpha.13":
+  version: 1.0.0-alpha.13
+  resolution: "@plone/types@npm:1.0.0-alpha.13"
   peerDependencies:
     history: ^5.3.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3626,7 +3626,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: e2625e6b04a8d645b77d17ffa2102207e8613e8d35a9111453054a415b7fa0b7f7e38217eff1f1898bdaa6e5d24911064112d9a395edf0b08f23645121162eab
+  checksum: 1e6fe525377b88df9206b520103f677ae91fc39448b47ce2d45efe7a4efb3340229d282a3c65d0014e43b78675665a90ba4bc9ca54338255ec83dd3d1c80edd1
   languageName: node
   linkType: hard
 
@@ -3649,13 +3649,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:18.0.0-alpha.29":
-  version: 18.0.0-alpha.29
-  resolution: "@plone/volto@npm:18.0.0-alpha.29"
+"@plone/volto@npm:18.0.0-alpha.32":
+  version: 18.0.0-alpha.32
+  resolution: "@plone/volto@npm:18.0.0-alpha.32"
   dependencies:
     "@loadable/component": 5.14.1
     "@loadable/server": 5.14.0
-    "@plone/registry": 1.5.6
+    "@plone/registry": 1.5.7
     "@plone/scripts": 3.6.1
     "@plone/volto-slate": 18.0.0-alpha.12
     "@redux-devtools/extension": ^3.3.0
@@ -3746,7 +3746,7 @@ __metadata:
     url: ^0.11.3
     use-deep-compare-effect: 1.8.1
     uuid: ^8.3.2
-  checksum: 0372d6a9074e339dc753c42be4ead13cba885b4c42a692dd1bec284c94c1afed983ccd30b5ee5302d27cad22ea1f7e0d126c2cdab88018c2c903a3f784bcd84d
+  checksum: dafca864f484ae2c310376fb647af1e3409518c71ce91d624d4746fd4eec6fdfbc19541c73424cb232bdeadeddd1a73c6174000397a7af3583ce5278faf082c4
   languageName: node
   linkType: hard
 
@@ -10607,7 +10607,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:9.1.0":
+"eslint-config-prettier@npm:^9.1.0":
   version: 9.1.0
   resolution: "eslint-config-prettier@npm:9.1.0"
   peerDependencies:
@@ -10618,7 +10618,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-react-app@npm:7.0.1":
+"eslint-config-react-app@npm:^7.0.1":
   version: 7.0.1
   resolution: "eslint-config-react-app@npm:7.0.1"
   dependencies:
@@ -10642,7 +10642,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-alias@npm:1.1.2":
+"eslint-import-resolver-alias@npm:^1.1.2":
   version: 1.1.2
   resolution: "eslint-import-resolver-alias@npm:1.1.2"
   peerDependencies:
@@ -10651,7 +10651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-babel-plugin-root-import@npm:1.1.1":
+"eslint-import-resolver-babel-plugin-root-import@npm:^1.1.1":
   version: 1.1.1
   resolution: "eslint-import-resolver-babel-plugin-root-import@npm:1.1.1"
   dependencies:
@@ -11963,8 +11963,8 @@ __metadata:
     "@loadable/server": 5.14.0
     "@loadable/webpack-plugin": 5.15.2
     "@plone/scripts": ^3.6.1
-    "@plone/types": 1.0.0-alpha.11
-    "@plone/volto": 18.0.0-alpha.29
+    "@plone/types": 1.0.0-alpha.13
+    "@plone/volto": 18.0.0-alpha.32
     "@redux-devtools/extension": ^3.3.0
     "@sinonjs/fake-timers": ^6.0.1
     "@storybook/addon-actions": ^8.0.4
@@ -12013,10 +12013,10 @@ __metadata:
     detect-browser: 5.1.0
     diff: 3.5.0
     eslint: ^8.57.0
-    eslint-config-prettier: 9.1.0
-    eslint-config-react-app: 7.0.1
-    eslint-import-resolver-alias: 1.1.2
-    eslint-import-resolver-babel-plugin-root-import: 1.1.1
+    eslint-config-prettier: ^9.1.0
+    eslint-config-react-app: ^7.0.1
+    eslint-import-resolver-alias: ^1.1.2
+    eslint-import-resolver-babel-plugin-root-import: ^1.1.1
     eslint-import-resolver-typescript: ^3.6.1
     eslint-plugin-import: ^2.29.1
     eslint-plugin-jsx-a11y: ^6.7.1
