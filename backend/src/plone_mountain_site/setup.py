@@ -50,6 +50,8 @@ setup(
         "prettyconf",
         "plone.api",
         "collective.volto.formsupport",
+        "plone.formwidget.hcaptcha",
+        "plone.formwidget.recaptcha",
     ],
     extras_require={
         "test": [
