@@ -51,8 +51,10 @@ setup(
         "plone.api",
         "collective.volto.formsupport[hcaptcha]",
         "collective.volto.formsupport[recaptcha]",
+        "collective.volto.formsupport[norobots]",
         "plone.formwidget.hcaptcha",
         "plone.formwidget.recaptcha",
+        "collective.z3cform.norobots",
     ],
     extras_require={
         "test": [
