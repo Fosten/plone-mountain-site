@@ -21,7 +21,7 @@ export default function applyConfig(config) {
     ...config.settings,
     isMultilingual: false,
     supportedLanguages: ['en'],
-    defaultLanguage: 'en_US',
+    defaultLanguage: 'en-us',
     matomoSiteId: '2',
     matomoUrlBase: 'https://stats.lillymountain.com/',
   };
