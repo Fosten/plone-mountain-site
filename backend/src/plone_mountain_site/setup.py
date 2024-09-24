@@ -48,13 +48,7 @@ setup(
         "Plone",
         "prettyconf",
         "plone.api",
-        "collective.volto.formsupport[hcaptcha]",
-        "collective.volto.formsupport[recaptcha]",
-        "collective.volto.formsupport[norobots]",
         "collective.volto.formsupport[honeypot]",
-        "plone.formwidget.hcaptcha",
-        "plone.formwidget.recaptcha",
-        "collective.z3cform.norobots",
         "collective.honeypot",
     ],
     extras_require={
