@@ -28,4 +28,6 @@
   <include package=".services" />
   <include package=".subscribers" />
 
+  <include package="collective.listmonk" />
+
 </configure>
