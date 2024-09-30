@@ -31,6 +31,7 @@
   },
   "addons": [
     "@eeacms/volto-accordion-block",
+    "@eeacms/volto-banner",
     "@eeacms/volto-columns-block",
     "@kitconcept/volto-slider-block",
     "volto-form-block",
@@ -140,6 +141,7 @@
   },
   "dependencies": {
     "@eeacms/volto-accordion-block": "*",
+    "@eeacms/volto-banner": "*",
     "@eeacms/volto-columns-block": "*",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-slider-block": "*",
