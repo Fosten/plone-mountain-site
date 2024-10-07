@@ -59,8 +59,8 @@ services:
         - traefik.http.services.mountain-backend.loadbalancer.server.port=8080
         # MIDDLEWARES
         ### basic_auth Authentication ClassicUI & Zope
-        - traefik.http.middlewares.mountain-backend-auth.basicauth.users=admin:$$2y$$05$$hGP72w.Rgky4RK7FrN9km.UpdwwHqB8gJNp8TQ4s4qDK8LxjfISl6
-        - traefik.http.middlewares.mountain-zope-auth.basicauth.users=admin:$$2y$$05$$hGP72w.Rgky4RK7FrN9km.UpdwwHqB8gJNp8TQ4s4qDK8LxjfISl6
+        - traefik.http.middlewares.mountain-backend-auth.basicauth.users=admin:${TRAEFIK_HASHED_PASSWORD}
+        - traefik.http.middlewares.mountain-zope-auth.basicauth.users=admin:${TRAEFIK_HASHED_PASSWORD}
         ### Backend ++api++ VHM
         - "traefik.http.middlewares.mountain-vhm-cleanup.replacepathregex.regex=^/((\\+\\+api\\+\\+/){1,})($$|.*)"
         - "traefik.http.middlewares.mountain-vhm-cleanup.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/Plone/++api++/VirtualHostRoot/$$3"
