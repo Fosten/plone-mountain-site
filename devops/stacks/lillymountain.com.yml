@@ -1,4 +1,4 @@
-version: "3.3"
+version: '3.9'
 services:
 
   frontend:
@@ -14,8 +14,6 @@ services:
       RAZZLE_FARMOS_API_SCOPE: ${RAZZLE_FARMOS_API_SCOPE}
       RAZZLE_FARMOS_API_USERNAME: ${RAZZLE_FARMOS_API_USERNAME}
       RAZZLE_FARMOS_API_PASSWORD: ${RAZZLE_FARMOS_API_PASSWORD}
-    ports:
-      - "3003:3000"
     depends_on:
       - backend
     deploy:
@@ -44,8 +42,6 @@ services:
       - traefik-mountain
     environment:
       RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-plone}'"
-    ports:
-      - "8083:8080"
     deploy:
       replicas: 1
       placement:
