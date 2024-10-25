@@ -1,4 +1,4 @@
-name: Manual Deployment of lillymountain.com
+name: Manual Deployment of testing.lillymountain.com
 
 on:
   workflow_dispatch:
