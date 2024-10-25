@@ -60,6 +60,7 @@ setup(
         "collective.honeypot",
         "collective.listmonk",
         "eea.banner",
+        "rss_provider",
     ],
     extras_require={
         "test": [
