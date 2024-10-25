@@ -1,21 +1,17 @@
+---
 version: '3.9'
-services:
 
+services:
   frontend:
     image: ghcr.io/fosten/plone-mountain-site-frontend:${STACK_PARAM:-latest}
+    environment:
+      RAZZLE_INTERNAL_API_PATH: http://lillymountain-com_backend:8080/Plone
+      RAZZLE_API_PATH: https://lillymountain.com
+    depends_on:
+      - backend
     networks:
       - traefik-public
       - traefik-mountain
-    environment:
-      RAZZLE_INTERNAL_API_PATH: http://lillymountain-com_backend:8080/Plone
-      RAZZLE_FARMOS_API_HOST: ${RAZZLE_FARMOS_API_HOST}
-      RAZZLE_FARMOS_API_CLIENT_ID: ${RAZZLE_FARMOS_API_CLIENT_ID}
-      RAZZLE_FARMOS_API_CLIENT_SECRET: ${RAZZLE_FARMOS_API_CLIENT_SECRET}
-      RAZZLE_FARMOS_API_SCOPE: ${RAZZLE_FARMOS_API_SCOPE}
-      RAZZLE_FARMOS_API_USERNAME: ${RAZZLE_FARMOS_API_USERNAME}
-      RAZZLE_FARMOS_API_PASSWORD: ${RAZZLE_FARMOS_API_PASSWORD}
-    depends_on:
-      - backend
     deploy:
       replicas: 1
       placement:
@@ -25,9 +21,10 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        # SERVICE
+        # Service
         - traefik.http.services.mountain-frontend.loadbalancer.server.port=3000
-        # HOSTS: Main
+        # Routers
+        ## /
         - traefik.http.routers.mountain-frontend.rule=Host(`lillymountain.com`)
         - traefik.http.routers.mountain-frontend.entrypoints=websecure
         - traefik.http.routers.mountain-frontend.tls=true
@@ -37,11 +34,11 @@ services:
 
   backend:
     image: ghcr.io/fosten/plone-mountain-site-backend:${STACK_PARAM:-latest}
+    environment:
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-plone}' port='${DB_PORT:-5432}'"
     networks:
       - traefik-public
       - traefik-mountain
-    environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-plone}'"
     deploy:
       replicas: 1
       placement:
@@ -51,46 +48,39 @@ services:
         - traefik.enable=true
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
-        # SERVICE
+        # Services
         - traefik.http.services.mountain-backend.loadbalancer.server.port=8080
-        # MIDDLEWARES
-        ### basic_auth Authentication ClassicUI & Zope
+        # Middlewares
+        ## VHM rewrite /++api++/
+        - "traefik.http.middlewares.mountain-backend-vhm-api.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
+        - "traefik.http.middlewares.mountain-backend-vhm-api.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/Plone/++api++/VirtualHostRoot$$1"
+        ## VHM rewrite /ClassicUI/
+        - "traefik.http.middlewares.mountain-backend-vhm-classic.replacepathregex.regex=^/ClassicUI($$|/.*)"
+        - "traefik.http.middlewares.mountain-backend-vhm-classic.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/Plone/VirtualHostRoot/_vh_ClassicUI$$1"
+        ## Basic Authentication
+        ### Note: all dollar signs in the hash need to be doubled for escaping.
+        ### To create user:password pair, it's possible to use this command:
+        ### echo $(htpasswd -nb user password) | sed -e s/\\$/\\$\\$/g
+        ### Defaults to admin:admin
         - traefik.http.middlewares.mountain-backend-auth.basicauth.users=admin:${TRAEFIK_HASHED_PASSWORD}
-        - traefik.http.middlewares.mountain-zope-auth.basicauth.users=admin:${TRAEFIK_HASHED_PASSWORD}
-        ### Backend ++api++ VHM
-        - "traefik.http.middlewares.mountain-vhm-cleanup.replacepathregex.regex=^/((\\+\\+api\\+\\+/){1,})($$|.*)"
-        - "traefik.http.middlewares.mountain-vhm-cleanup.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/Plone/++api++/VirtualHostRoot/$$3"
-        - "traefik.http.middlewares.mountain-vhm.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
-        - "traefik.http.middlewares.mountain-vhm.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/Plone/++api++/VirtualHostRoot/$$1"
-        ### Backend ClassicUI VHM
-        - "traefik.http.middlewares.mountain-vhm-classicui.replacepathregex.regex=^/ClassicUI($$|/.*)"
-        - "traefik.http.middlewares.mountain-vhm-classicui.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/Plone/VirtualHostRoot/_vh_ClassicUI/$$1"
-        ### Backend zopeadmin root path
-        - "traefik.http.middlewares.mountain-root-zopeadmin.replacepathregex.regex=^/zopeadmin($$|/.*)"
-        - "traefik.http.middlewares.mountain-root-zopeadmin.replacepathregex.replacement=/VirtualHostBase/https/lillymountain.com/VirtualHostRoot/_vh_ClassicUI/manage_main/$$1"
 
-        # ROUTES
-        ## lillymountain.com API
-        - traefik.http.routers.mountain-backend.rule=Host(`lillymountain.com`) && (PathPrefix(`/++api++`))
-        - traefik.http.routers.mountain-backend.entrypoints=websecure
-        - traefik.http.routers.mountain-backend.tls=true
-        - traefik.http.routers.mountain-backend.service=mountain-backend
-        - traefik.http.routers.mountain-backend.middlewares=gzip,mountain-vhm-cleanup,mountain-vhm
-        ### lillymountain.com /ClassicUI - protected with basic auth (prevent SEOs from crawl it)
-        - traefik.http.routers.mountain-classicui.rule=Host(`lillymountain.com`) && (PathPrefix(`/ClassicUI`))
-        - traefik.http.routers.mountain-classicui.entrypoints=websecure
-        - traefik.http.routers.mountain-classicui.tls=true
-        - traefik.http.routers.mountain-classicui.service=mountain-backend
-        - traefik.http.routers.mountain-classicui.middlewares=gzip,mountain-backend-auth,mountain-vhm-classicui
-        ### lillymountain.com /zope - protected with basic auth (prevent unauthorized acess)
-        - traefik.http.routers.mountain-zopeadmin.rule=Host(`lillymountain.com`) && (PathPrefix(`/zopeadmin`))
-        - traefik.http.routers.mountain-zopeadmin.entrypoints=websecure
-        - traefik.http.routers.mountain-zopeadmin.tls=true
-        - traefik.http.routers.mountain-zopeadmin.service=mountain-backend
-        - traefik.http.routers.mountain-zopeadmin.middlewares=gzip,mountain-zope-auth,mountain-root-zopeadmin
+        # Routes
+        ## /++api++
+        - traefik.http.routers.mountain-backend-api.rule=Host(`lillymountain.com`) && PathPrefix(`/++api++`)
+        - traefik.http.routers.mountain-backend-api.entrypoints=websecure
+        - traefik.http.routers.mountain-backend-api.tls=true
+        - traefik.http.routers.mountain-backend-api.service=mountain-backend
+        - traefik.http.routers.mountain-backend-api.middlewares=gzip,mountain-backend-vhm-api
+        ## /ClassicUI
+        - traefik.http.routers.mountain-backend-classic.rule=Host(`lillymountain.com`) && PathPrefix(`/ClassicUI`)
+        - traefik.http.routers.mountain-backend-classic.entrypoints=websecure
+        - traefik.http.routers.mountain-backend-classic.tls=true
+        - traefik.http.routers.mountain-backend-classic.service=mountain-backend
+        - traefik.http.routers.mountain-backend-classic.middlewares=gzip,mountain-backend-auth,mountain-backend-vhm-classic
 
 networks:
   traefik-public:
     external: true
   traefik-mountain:
+    internal: true
     driver: overlay

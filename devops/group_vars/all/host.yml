@@ -1,3 +1,0 @@
----
-hostname: 'plone-mountain-site'
-fqdn: '{{ hostname }}.localhost'

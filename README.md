@@ -1,79 +1,110 @@
-# Plone Mountain Site
+# Plone Mountain Site 🚀
 
-[![Built with Cookiecutter Plone Starter](https://img.shields.io/badge/built%20with-Cookiecutter%20Plone%20Starter-0083be.svg?logo=cookiecutter)](https://github.com/collective/cookiecutter-plone-starter/)
+[![Built with Cookieplone](https://img.shields.io/badge/built%20with-Cookieplone-0083be.svg?logo=cookiecutter)](https://github.com/plone/cookiecutter-plone/)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![Backend Tests](https://github.com/fosten/plone-mountain-site/actions/workflows/backend-testing.yml/badge.svg)](https://github.com/fosten/plone-mountain-site/actions/workflows/backend-testing.yml)
-[![Frontend Tests](https://github.com/fosten/plone-mountain-site/actions/workflows/frontend-testing.yml/badge.svg)](https://github.com/fosten/plone-mountain-site/actions/workflows/frontend-testing.yml)
+[![Backend Tests](https://github.com/fosten/plone-mountain-site/actions/workflows/backend.yml/badge.svg)](https://github.com/fosten/plone-mountain-site/actions/workflows/backend.yml)
+[![Frontend Tests](https://github.com/fosten/plone-mountain-site/actions/workflows/frontend.yml/badge.svg)](https://github.com/fosten/plone-mountain-site/actions/workflows/frontend.yml)
 
 Plone 6 website for Mountain
 
-## Quick start
+## Quick Start 🏁
 
-### Development Setup
+### Prerequisites ✅
 
-- Python 3.10, 3.11, 3.12
-- Node 18
-- yarn
-- Docker
+Ensure you have the following installed:
 
-### Install
+- Python 3.11 🐍
+- Node 20 🟩
+- pnpm 🧶
+- Docker 🐳
+
+### Installation 🔧
+
+1. Clone the repository:
 
 ```shell
 git clone git@github.com:fosten/plone-mountain-site.git
 cd plone-mountain-site
+```
+
+2. Install both Backend and Frontend:
+
+```shell
 make install
 ```
 
-### Start
+### Fire Up the Servers 🔥
 
-Start the Backend (http://localhost:8080/)
-
-```shell
-make start-backend
-```
-
-Start the Frontend (http://localhost:3000/)
+1. Create a new Plone site on your first run:
 
 ```shell
-make start-frontend
+make backend-create-site
 ```
 
-## Structure
+2. Start the Backend at [http://localhost:8080/](http://localhost:8080/):
 
-This monorepo is composed by two distinct codebases: api and frontend.
+```shell
+make backend-start
+```
 
-- **backend**: API (Backend) Plone installation using pip (not buildout). Includes a policy package named plone_mountain_site
-- **frontend**: React (Volto) package named frontend
+3. In a new terminal, start the Frontend at [http://localhost:3000/](http://localhost:3000/):
 
-### Reasoning
+```shell
+make frontend-start
+```
 
-- Repo contains all codebase needed to run the site (excluding existing addons for Plone and React).
-- Github Workflows are triggered based on changes on each codebase (see .github/workflows)
-- Easier to create Docker images for each codebase
-- Showcase Plone installation/setup without buildout
+Voila! Your Plone site should be live and kicking! 🎉
 
-## Linters and Formatting
+### Local Stack Deployment 📦
 
-There are some hooks to run lint checks on the code. If you want to automatically format them, you can run
+Deploy a local `Docker Compose` environment that includes:
 
-`make format`
+- Docker images for Backend and Frontend 🖼️
+- A stack with a Traefik router and a Postgres database 🗃️
+- Accessible at [http://plone-mountain-site.localhost](http://plone-mountain-site.localhost) 🌐
 
-in the root folder or especifically in each backend or frontend folders.
+Execute the following:
 
-Linters commands are available in each backend and frontend folder.
+```shell
+make stack-start
+make stack-create-site
+```
 
-## Acceptance tests
+And... you're all set! Your Plone site is up and running locally! 🚀
 
-There are `Makefile` commands in place:
+## Project Structure 🏗️
 
-`build-test-acceptance-server`: Build Acceptance Backend Server Docker image that it's being used afterwards. Must be run before running the tests, if the backend code has changed.
+This monorepo consists of three distinct sections: `backend`, `frontend`, and `devops`.
 
-`start-test-acceptance-server`: Start server fixture in docker (previous build required)
+- **backend**: Houses the API and Plone installation, utilizing pip instead of buildout, and includes a policy package named plone.mountain_site.
+- **frontend**: Contains the React (Volto) package.
+- **devops**: Encompasses Docker Stack, Ansible playbooks, and Cache settings.
 
-`start-test-acceptance-frontend`: Start the Core Acceptance Frontend Fixture in dev mode
+### Why This Structure? 🤔
 
-`test-acceptance`: Start Core Cypress Acceptance Tests in dev mode
+- All necessary codebases to run the site are contained within the repo (excluding existing addons for Plone and React).
+- Specific GitHub Workflows are triggered based on changes in each codebase (refer to .github/workflows).
+- Simplifies the creation of Docker images for each codebase.
+- Demonstrates Plone installation/setup without buildout.
 
-## Credits
+## Code Quality Assurance 🧐
 
-**This was generated by [cookiecutter-plone-starter](https://github.com/collective/cookiecutter-plone-starter) on 2023-02-13 22:00:54**
+To automatically format your code and ensure it adheres to quality standards, execute:
+
+```shell
+make check
+```
+
+Linters can be run individually within the `backend` or `frontend` folders.
+
+## Internationalization 🌐
+
+Generate translation files for Plone and Volto with ease:
+
+```shell
+make i18n
+```
+
+## Credits and Acknowledgements 🙏
+
+Crafted with care by **Generated using [Cookieplone (0.7.1)](https://github.com/plone/cookieplone) and [cookiecutter-plone (6f17615)](https://github.com/plone/cookiecutter-plone/commit/6f1761520019010ae3799dfa0c6b999b533d59a7) on 2024-10-24 10:24:42.596567**. A special thanks to all contributors and supporters!

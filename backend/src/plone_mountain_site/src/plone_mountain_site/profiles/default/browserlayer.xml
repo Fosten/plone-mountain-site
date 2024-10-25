@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layers>
-  <layer interface="plone_mountain_site.interfaces.IPLONE_MOUNTAIN_SITELayer"
-         name="plone_mountain_site"
-  />
-</layers>

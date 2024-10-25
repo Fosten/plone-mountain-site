@@ -1,14 +1,21 @@
 {
-    "volto-mountain-theme": {
-        "url": "https://github.com/Fosten/volto-mountain-theme.git",
-        "path": "src",
-        "package": "@Fosten/volto-mountain-theme",
-        "branch": "main"
-    },
-    "volto-farmOS": {
-        "url": "https://github.com/Fosten/volto-farmOS.git",
-        "path": "src",
-        "package": "@Fosten/volto-farmOS",
-        "branch": "main"
-    }
+  "core": {
+    "output": "./",
+    "package": "@plone/volto",
+    "url": "git@github.com:plone/volto.git",
+    "https": "https://github.com/plone/volto.git",
+    "tag": "18.0.0-alpha.46"
+  },
+  "volto-mountain-theme": {
+    "develop": true,
+    "output": "packages",
+    "url": "git@github.com:fosten/volto-mountain-theme.git",
+    "https": "https://github.com/Fosten/volto-mountain-theme.git"
+  },
+  "volto-farmOS": {
+    "develop": true,
+    "output": "packages",
+    "url": "git@github.com:fosten/volto-farmOS.git",
+    "https": "https://github.com/Fosten/volto-farmOS.git"
+  }
 }
