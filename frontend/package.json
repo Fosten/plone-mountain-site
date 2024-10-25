@@ -36,8 +36,7 @@
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
     "volto-mountain-site": "workspace:*",
-    "@Fosten/volto-farmOS": "workspace:*",
-    "@Fosten/volto-mountain-theme": "workspace:*"
+    "@Fosten/volto-farmOS": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
