@@ -12,7 +12,7 @@
     "url": "git@github.com:fosten/volto-mountain-theme.git",
     "https": "https://github.com/Fosten/volto-mountain-theme.git"
   },
-  "volto-farmOS": {
+  "volto-farmos": {
     "develop": true,
     "output": "packages",
     "url": "git@github.com:fosten/volto-farmOS.git",

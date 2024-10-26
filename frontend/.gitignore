@@ -11,5 +11,5 @@ node_modules
 results
 pnpm-lock.yaml
 /public
-/packages/volto-farmOS/
+/packages/volto-farmos/
 /packages/volto-mountain-theme/

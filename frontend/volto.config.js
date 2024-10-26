@@ -1,6 +1,6 @@
 const addons = [
   'volto-mountain-site',
-  '@Fosten/volto-farmOS',
+  'volto-farmos',
   'volto-mountain-theme'
 ];
 const theme = 'volto-mountain-theme';
