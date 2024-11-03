@@ -40,7 +40,7 @@ services:
         # Routers
         ## /
         - traefik.http.routers.testing_mountain-frontend.rule=Host(`testing.lillymountain.com`)
-        - traefik.http.routers.testing_mountain-frontend.entrypoints=websecure
+        - traefik.http.routers.testing_mountain-frontend.entrypoints=https
         - traefik.http.routers.testing_mountain-frontend.tls=true
         - traefik.http.routers.testing_mountain-frontend.tls.certresolver=mydnschallenge
         - traefik.http.routers.testing_mountain-frontend.service=testing_mountain-frontend
@@ -81,13 +81,13 @@ services:
         # Routes
         ## /++api++
         - traefik.http.routers.testing_mountain-backend-api.rule=Host(`testing.lillymountain.com`) && PathPrefix(`/++api++`)
-        - traefik.http.routers.testing_mountain-backend-api.entrypoints=websecure
+        - traefik.http.routers.testing_mountain-backend-api.entrypoints=https
         - traefik.http.routers.testing_mountain-backend-api.tls=true
         - traefik.http.routers.testing_mountain-backend-api.service=testing_mountain-backend
         - traefik.http.routers.testing_mountain-backend-api.middlewares=gzip,testing_mountain-backend-vhm-api
         ## /ClassicUI
         - traefik.http.routers.testing_mountain-backend-classic.rule=Host(`testing.lillymountain.com`) && PathPrefix(`/ClassicUI`)
-        - traefik.http.routers.testing_mountain-backend-classic.entrypoints=websecure
+        - traefik.http.routers.testing_mountain-backend-classic.entrypoints=https
         - traefik.http.routers.testing_mountain-backend-classic.tls=true
         - traefik.http.routers.testing_mountain-backend-classic.service=testing_mountain-backend
         - traefik.http.routers.testing_mountain-backend-classic.middlewares=gzip,testing_mountain-backend-auth,testing_mountain-backend-vhm-classic
