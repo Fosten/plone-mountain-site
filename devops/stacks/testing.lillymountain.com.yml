@@ -25,7 +25,7 @@ services:
           - node.labels.type == mountainapp
       labels:
         - traefik.enable=true
-        - traefik.docker.network=traefik-public
+        - traefik.swarm.network=traefik-public
         - traefik.constraint-label=traefik-public
         # Service
         - traefik.http.services.testing_mountain-frontend.loadbalancer.server.port=3000
@@ -60,7 +60,7 @@ services:
           - node.labels.type == mountainapp
       labels:
         - traefik.enable=true
-        - traefik.docker.network=traefik-public
+        - traefik.swarm.network=traefik-public
         - traefik.constraint-label=traefik-public
         # Services
         - traefik.http.services.testing_mountain-backend.loadbalancer.server.port=8080
