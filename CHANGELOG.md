@@ -13,7 +13,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- towncrier release notes start -->
 
-# 1.2.0 (2024-10-24)
+## 2.1.0 (2024-03-26)
+
+- Update CHANGELOG.md [fosten]
+- Bump package.json versions to 2.1.0 [fosten]
+- Bump Plone from 6.1.0 to 6.1.1 [fosten]
+- Bump Volto from 18.0.0 to 18.10.1 [fosten]
+- Set python_requires to >=3.10 [fosten]
+- Switch from z3c.autoinclude.plugin to plone.autoinclude.plugin [fosten]
+- Bump Plone from 6.0.13 to 6.1.0 [fosten]
+- corepack signature verfication workaround [fosten]
+- Change traefik.docker to traefik.swarm [fosten]
+
+## 2.0.0 (2024-11-02)
+
+- Rename traefik entrypoints [fosten]
+- Bump Volto from 18.0.0-alpha.42 to 18.0.0 [fosten]
+- Remove old browserlayer in new install profile [fosten]
+- Add kitconcept.seo and enable for Image type [fosten]
+- Update .eslintrc.js and storybook/main.js [fosten]
+- Add config.resolve.fallback querystring to querystring-es3 [fosten]
+- Add volto-rss-provider and rss_provider [fosten]
+- Refactor using cookieplone [fosten]
+
+## 1.2.0 (2024-10-24)
 
 - Update CHANGELOG.md [fosten]
 - Remove ports [fosten]
@@ -27,14 +50,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add collective.honeypot [fosten]
 - Bump Volto from 18.0.0-alpha.35 to 18.0.0-alpha.42 [fosten]
 
-# 1.1.0 (2024-05-24)
+## 1.1.0 (2024-05-24)
 
 - Add collective.volto.formsupport, volto-form-block, volto-subblocks [fosten]
 - Upgrade Volto 18.0.0-alpha.32 [fosten]
 - Add dependabot for automatic updates to Github Actions [fosten]
 - Upgrade Plone 6.0.11.1 [fosten]
 
-# 1.0.0 (2023-09-27)
+## 1.0.0 (2023-09-27)
 
 - Add release stack [fosten]
 - Add testing stack [fosten]
@@ -47,12 +70,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade to 6.0.6/16.21.3 [fosten]
 - Use mrs.developer [fosten]
 
-# 0.2.0 (2023-06-28)
+## 0.2.0 (2023-06-28)
 
 - CSS Colors [fosten]
 - Add hover effect to teasers [fosten]
 - Change logo, footer, header [fosten]
 
-# 0.1.0 (2023-02-13)
+## 0.1.0 (2023-02-13)
 
 - Initial version [fosten]
