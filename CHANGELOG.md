@@ -39,6 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update .eslintrc.js and storybook/main.js [fosten]
 - Add config.resolve.fallback querystring to querystring-es3 [fosten]
 - Add volto-rss-provider and rss_provider [fosten]
+- Bump node from 18 to 22 [fosten]
 - Refactor using cookieplone [fosten]
 
 ## 1.2.0 (2024-10-24)
@@ -70,7 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add matomoSiteId, matomoUrlBase [fosten]
 - Override favicon [fosten]
 - Upgrade Volto 17.0.0-alpha23 [fosten]
-- Upgrade to Node 18 [fosten]
+- Bump node from 16 to 18 [fosten]
 - checksumBehavior: update [fosten]
 - Upgrade to 6.0.6/16.21.3 [fosten]
 - Use mrs.developer [fosten]
