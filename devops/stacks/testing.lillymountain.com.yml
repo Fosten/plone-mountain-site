@@ -42,7 +42,7 @@ services:
         - traefik.http.routers.testing_mountain-frontend.tls=true
         - traefik.http.routers.testing_mountain-frontend.tls.certresolver=mydnschallenge
         - traefik.http.routers.testing_mountain-frontend.service=testing_mountain-frontend
-        - traefik.http.routers.testing_mountain-frontend.middlewares=gzip,testing_mountain-frontend-auth
+        - traefik.http.routers.testing_mountain-frontend.middlewares=testing_mountain-frontend-auth
 
   backend:
     image: ghcr.io/fosten/plone-mountain-site-backend:${STACK_PARAM:-latest}
@@ -82,13 +82,13 @@ services:
         - traefik.http.routers.testing_mountain-backend-api.entrypoints=https
         - traefik.http.routers.testing_mountain-backend-api.tls=true
         - traefik.http.routers.testing_mountain-backend-api.service=testing_mountain-backend
-        - traefik.http.routers.testing_mountain-backend-api.middlewares=gzip,testing_mountain-backend-vhm-api
+        - traefik.http.routers.testing_mountain-backend-api.middlewares=testing_mountain-backend-vhm-api
         ## /ClassicUI
         - traefik.http.routers.testing_mountain-backend-classic.rule=Host(`testing.lillymountain.com`) && PathPrefix(`/ClassicUI`)
         - traefik.http.routers.testing_mountain-backend-classic.entrypoints=https
         - traefik.http.routers.testing_mountain-backend-classic.tls=true
         - traefik.http.routers.testing_mountain-backend-classic.service=testing_mountain-backend
-        - traefik.http.routers.testing_mountain-backend-classic.middlewares=gzip,testing_mountain-backend-auth,testing_mountain-backend-vhm-classic
+        - traefik.http.routers.testing_mountain-backend-classic.middlewares=testing_mountain-backend-auth,testing_mountain-backend-vhm-classic
 
 networks:
   traefik-public:
