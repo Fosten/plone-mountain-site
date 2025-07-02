@@ -6,6 +6,7 @@ const applyConfig = (config) => {
     defaultLanguage: 'en-us',
     matomoSiteId: '2',
     matomoUrlBase: 'https://stats.lillymountain.com/',
+    showPloneLogin: false,
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {
