@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- towncrier release notes start -->
 
-## Unreleased
+## [Unreleased]
 
 - Add volto-authomatic, pas.plugins.oidc, pas.plugins.keycloakgroups [fosten]
 - Bump Plone from 6.1.1 to 6.1.3 [fosten]
@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change volto-rss-provider to @plone-collective/volto-rss-provider [fosten]
 - Bump Volto from 18.10.1 to 19.0.0-alpha.9 [fosten]
 
-## 2.1.0 (2024-03-30)
+## [2.1.0] (2024-03-30)
 
 - Update CHANGELOG.md [fosten]
 - Bump package.json versions to 2.1.0 [fosten]
@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - corepack signature verfication workaround [fosten]
 - Change traefik.docker to traefik.swarm [fosten]
 
-## 2.0.0 (2024-11-02)
+## [2.0.0] (2024-11-02)
 
 - Rename traefik entrypoints [fosten]
 - Bump Volto from 18.0.0-alpha.42 to 18.0.0 [fosten]
@@ -45,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump node from 18 to 22 [fosten]
 - Refactor using cookieplone [fosten]
 
-## 1.2.0 (2024-10-24)
+## [1.2.0] (2024-10-24)
 
 - Update CHANGELOG.md [fosten]
 - Remove ports [fosten]
@@ -59,14 +59,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add collective.honeypot [fosten]
 - Bump Volto from 18.0.0-alpha.35 to 18.0.0-alpha.42 [fosten]
 
-## 1.1.0 (2024-05-24)
+## [1.1.0] (2024-05-24)
 
 - Add collective.volto.formsupport, volto-form-block, volto-subblocks [fosten]
 - Upgrade Volto 18.0.0-alpha.32 [fosten]
 - Add dependabot for automatic updates to Github Actions [fosten]
 - Upgrade Plone 6.0.11.1 [fosten]
 
-## 1.0.0 (2023-09-27)
+## [1.0.0] (2023-09-27)
 
 - Add release stack [fosten]
 - Add testing stack [fosten]
@@ -79,12 +79,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgrade to 6.0.6/16.21.3 [fosten]
 - Use mrs.developer [fosten]
 
-## 0.2.0 (2023-06-28)
+## [0.2.0] (2023-06-28)
 
 - CSS Colors [fosten]
 - Add hover effect to teasers [fosten]
 - Change logo, footer, header [fosten]
 
-## 0.1.0 (2023-02-13)
+## [0.1.0] (2023-02-13)
 
 - Initial version [fosten]
+
+[Unreleased]: https://github.com/Fosten/plone-mountain-site/compare/2.1.0...main
+[2.1.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/2.1.0
+[2.0.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/2.0.0
+[1.2.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/1.2.0
+[1.1.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/1.1.0
+[1.0.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/1.0.0
+[0.2.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/0.2.0
+[0.1.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/0.1.0
+[fosten]: https://github.com/Fosten
