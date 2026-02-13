@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+
+## [2.2.0] (2026-02-13)
+
+- Release 2.2.0 [fosten]
 - Bump Plone from 6.1.1 to 6.1.4 [fosten]
 - Add `.mxdev_cache` to .gitignore in backend [fosten]
 - Update pre-commit version and README.md [fosten]
@@ -93,7 +98,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version [fosten]
 
-[Unreleased]: https://github.com/Fosten/plone-mountain-site/compare/2.1.0...main
+[Unreleased]: https://github.com/Fosten/plone-mountain-site/compare/2.2.0...main
+[2.2.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/2.2.0
 [2.1.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/2.1.0
 [2.0.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/2.0.0
 [1.2.0]: https://github.com/Fosten/plone-mountain-site/releases/tag/1.2.0
