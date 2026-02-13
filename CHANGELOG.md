@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-
+- Bump node from 22 to 24 [fosten]
 
 ## [2.2.0] (2026-02-13)
 
