@@ -2,6 +2,7 @@
 ARG VOLTO_VERSION
 FROM plone/frontend-builder:${VOLTO_VERSION} as builder
 
+COPY --chown=node patches /app/patches
 COPY --chown=node packages/volto-mountain-site /app/packages/volto-mountain-site
 COPY --chown=node volto.config.js /app/
 COPY --chown=node package.json /app/package.json
