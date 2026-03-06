@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add no-frozen-lockfile flag to pnpm install [fosten]
 - Patch volto-form-block to fix the anonymous export in fieldSchema.js [fosten]
-- Bump Volto from 19.0.0-alpha.9 to 19.0.0-alpha.26 [fosten]
+- Bump Volto from 19.0.0-alpha.9 to 19.0.0-alpha.27 [fosten]
 - Bump Plone from 6.1.4 to 6.2.0a1 [fosten]
 - Bump node from 22 to 24 [fosten]
 
