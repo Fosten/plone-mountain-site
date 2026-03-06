@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add envar FARMOS_API_SCOPE to stacks [fosten]
 - Add no-frozen-lockfile flag to pnpm install [fosten]
 - Patch volto-form-block to fix the anonymous export in fieldSchema.js [fosten]
 - Bump Volto from 19.0.0-alpha.9 to 19.0.0-alpha.27 [fosten]
