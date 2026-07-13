@@ -10,9 +10,9 @@ COPY --chown=node pnpm-workspace.yaml /app/
 
 RUN --mount=type=cache,id=pnpm,target=/app/.pnpm-store,uid=1000 <<EOT
      pnpm dlx mrs-developer missdev --no-config --fetch-https
-     pnpm install --no-frozen-lockfile && pnpm build:deps
+     pnpm install && pnpm build:deps
      pnpm build
-     CI=1 pnpm install --no-frozen-lockfile --prod
+     CI=1 pnpm install --prod
 EOT
 
 FROM plone/frontend-prod-config:${VOLTO_VERSION}
