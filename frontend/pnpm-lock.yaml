@@ -12,9 +12,6 @@ catalogs:
     '@react-aria/utils':
       specifier: ^3.34.0
       version: 3.34.1
-    '@react-spectrum/utils':
-      specifier: ^3.13.0
-      version: 3.13.1
     '@tailwindcss/vite':
       specifier: ^4.1.4
       version: 4.2.1
@@ -59,13 +56,13 @@ catalogs:
       version: 8.2.1
     react-aria:
       specifier: ^3.48.0
-      version: 3.50.0
+      version: 3.48.0
     react-aria-components:
       specifier: ^1.17.0
-      version: 1.19.0
+      version: 1.17.0
     react-stately:
       specifier: ^3.46.0
-      version: 3.48.0
+      version: 3.46.0
     release-it:
       specifier: ^20.0.1
       version: 20.2.1
@@ -103,6 +100,7 @@ catalogs:
 overrides:
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.15
   react-refresh: ^0.14.2
+  '@react-spectrum/utils': 3.13.0
 
 pnpmfileChecksum: sha256-Hcp9aLQWXbkoCfA/h/5NhTLuQ0rHcq6oiQA6Sel57eg=
 
@@ -133,8 +131,8 @@ importers:
         specifier: 'catalog:'
         version: 3.34.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@react-spectrum/utils':
-        specifier: 'catalog:'
-        version: 3.13.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 3.13.0
+        version: 3.13.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -143,16 +141,16 @@ importers:
         version: 18.2.0
       react-aria:
         specifier: 'catalog:'
-        version: 3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-aria-components:
         specifier: 'catalog:'
-        version: 1.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 1.17.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom:
         specifier: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
         version: 18.2.0(react@18.2.0)
       react-stately:
         specifier: 'catalog:'
-        version: 3.48.0(react@18.2.0)
+        version: 3.46.0(react@18.2.0)
       tailwind-merge:
         specifier: 'catalog:'
         version: 3.5.0
@@ -567,7 +565,7 @@ importers:
         version: 2.0.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-aria-components:
         specifier: 'catalog:'
-        version: 1.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 1.17.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-beautiful-dnd:
         specifier: 13.0.0
         version: 13.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1504,8 +1502,8 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0
 
-  '@adobe/react-spectrum@3.47.2':
-    resolution: {integrity: sha512-QxsE7bPBGpzwYofACF0RAL/Zs3p0u9HNvCDf9LEN87rEGFpkagIB+T+TSZ0xbl6BJ6z7S02m3zAFk3s9FoHJpQ==}
+  '@adobe/react-spectrum@3.47.0':
+    resolution: {integrity: sha512-EDQuMzz0kUeiMUUlxoeLFQyyxOXaAC7qlBw2PYOUfFLYd87xcV7VVV0JxiYx8zGk1IIY3UgQHgXrS1fv7CgezQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
@@ -3637,8 +3635,8 @@ packages:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@react-spectrum/utils@3.13.1':
-    resolution: {integrity: sha512-qTtZMnNYeOAo1WppaUeNbDiJiyngt88cdcS2B7qU4XJREV4bBW6jWQ4s5m8Yk4bljG/C0NQH85vnWRBERh9upA==}
+  '@react-spectrum/utils@3.13.0':
+    resolution: {integrity: sha512-xtuKCwbsP2xwRtsYojSh/kbm5/YfVs398Five1RfJZNLSc/dXrz6KWdyusHp+gNCpv4Z83hwCaO8TPwbrehwoQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
@@ -9622,14 +9620,14 @@ packages:
       react: '>=15.6.2'
       react-dom: '>=15.6.2'
 
-  react-aria-components@1.19.0:
-    resolution: {integrity: sha512-2smSS5nqJ8cGYMQezuUXveZm7eMyHCqTN6mDpylQBYLYbdF5dxCCuW1DHn1VKLe1DybSfPvX/cZtJlDmvFfn8A==}
+  react-aria-components@1.17.0:
+    resolution: {integrity: sha512-0EyisMgvsFJ2aML3crDYv2tW5vT2Ryf8PGzY/g63JjDdCbLshlwazhS8JNtPF1vkTkungJJ6sVJbKyX+YKSoFA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  react-aria@3.50.0:
-    resolution: {integrity: sha512-S0Os6QZk33fzUAKu1QLT9afoUaCBt1ZNdoiq0n2YMVgKIdNIQS8zxiZ8O9hYE6QyDkHKjD6q39LQZ+qaSAIgjw==}
+  react-aria@3.48.0:
+    resolution: {integrity: sha512-jQjd4rBEIMqecBaAKYJbVGK6EqIHLa5znVQ7jwFyK5vCyljoj6KhgtiahmcIPsG5vG5vEDLw+ba+bEWn6A2P4w==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
@@ -9885,8 +9883,8 @@ packages:
       react: ^16.0.0
       react-dom: ^16.0.0
 
-  react-stately@3.48.0:
-    resolution: {integrity: sha512-ImicSAG+lTotAe5izcs1fz49Zk48w7pDusqYg04WaPhCoej8BJ24soMu3iLXIrsi273s4P1gZrYGrqReMfgEEA==}
+  react-stately@3.46.0:
+    resolution: {integrity: sha512-OdxhWvHgs2L4OJGIs7hnuTr5WjjMM6enhNEAMRqiekhF8+ITvA2LRwNftOZwcogaoCslGYq5S2VQTQwnm0GbCA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
@@ -11802,20 +11800,20 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@adobe/react-spectrum@3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@adobe/react-spectrum@3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@internationalized/date': 3.12.2
       '@react-types/shared': 3.36.0(react@18.2.0)
-      '@spectrum-icons/ui': 3.7.1(@adobe/react-spectrum@3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@spectrum-icons/workflow': 4.3.1(@adobe/react-spectrum@3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@spectrum-icons/ui': 3.7.1(@adobe/react-spectrum@3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@spectrum-icons/workflow': 4.3.1(@adobe/react-spectrum@3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@swc/helpers': 0.5.19
       client-only: 0.0.1
       clsx: 2.1.1
       react: 18.2.0
-      react-aria: 3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react-aria-components: 1.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-aria: 3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-aria-components: 1.17.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
-      react-stately: 3.48.0(react@18.2.0)
+      react-stately: 3.46.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       use-sync-external-store: 1.6.0(react@18.2.0)
 
@@ -14041,12 +14039,12 @@ snapshots:
     dependencies:
       '@internationalized/date': 3.12.2
       '@react-aria/utils': 3.34.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@react-spectrum/utils': 3.13.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@react-spectrum/utils': 3.13.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       clsx: 2.1.1
       react: 18.2.0
-      react-aria: 3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react-aria-components: 1.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react-stately: 3.48.0(react@18.2.0)
+      react-aria: 3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-aria-components: 1.17.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-stately: 3.46.0(react@18.2.0)
       tailwind-merge: 3.5.0
       tailwind-variants: 3.2.2(tailwind-merge@3.5.0)(tailwindcss@4.2.1)
       tailwindcss: 4.2.1
@@ -14120,16 +14118,16 @@ snapshots:
     dependencies:
       '@swc/helpers': 0.5.19
       react: 18.2.0
-      react-aria: 3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-aria: 3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
-      react-stately: 3.48.0(react@18.2.0)
+      react-stately: 3.46.0(react@18.2.0)
 
-  '@react-spectrum/utils@3.13.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@react-spectrum/utils@3.13.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@adobe/react-spectrum': 3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@adobe/react-spectrum': 3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@swc/helpers': 0.5.19
       react: 18.2.0
-      react-aria: 3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-aria: 3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
 
   '@react-types/shared@3.33.0(react@18.2.0)':
@@ -14276,18 +14274,18 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 1.8.6
 
-  '@spectrum-icons/ui@3.7.1(@adobe/react-spectrum@3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@spectrum-icons/ui@3.7.1(@adobe/react-spectrum@3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@adobe/react-spectrum': 3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@adobe/react-spectrum': 3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@adobe/react-spectrum-ui': 1.2.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@babel/runtime': 7.28.6
       '@swc/helpers': 0.5.19
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  '@spectrum-icons/workflow@4.3.1(@adobe/react-spectrum@3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@spectrum-icons/workflow@4.3.1(@adobe/react-spectrum@3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@adobe/react-spectrum': 3.47.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@adobe/react-spectrum': 3.47.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@adobe/react-spectrum-workflow': 2.3.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@swc/helpers': 0.5.19
       react: 18.2.0
@@ -20838,18 +20836,18 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  react-aria-components@1.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  react-aria-components@1.17.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@internationalized/date': 3.12.2
       '@react-types/shared': 3.36.0(react@18.2.0)
       '@swc/helpers': 0.5.19
       client-only: 0.0.1
       react: 18.2.0
-      react-aria: 3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-aria: 3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
-      react-stately: 3.48.0(react@18.2.0)
+      react-stately: 3.46.0(react@18.2.0)
 
-  react-aria@3.50.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  react-aria@3.48.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@internationalized/date': 3.12.2
       '@internationalized/number': 3.6.7
@@ -20860,7 +20858,7 @@ snapshots:
       clsx: 2.1.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-stately: 3.48.0(react@18.2.0)
+      react-stately: 3.46.0(react@18.2.0)
       use-sync-external-store: 1.6.0(react@18.2.0)
 
   react-beautiful-dnd@13.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
@@ -21236,7 +21234,7 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
-  react-stately@3.48.0(react@18.2.0):
+  react-stately@3.46.0(react@18.2.0):
     dependencies:
       '@internationalized/date': 3.12.2
       '@internationalized/number': 3.6.7

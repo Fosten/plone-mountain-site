@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Pin @react-spectrum/utils to prevent React Aria dependency drift in Volto snapshots [fosten]
 - Replace @collective/volto-form-block, collective.volto.formsupport with @plone/volto-form-block, plone.formblock, collective.volto.otp [fosten]
 - Remove pnpm-lock.yaml from .gitignore to resolve ButtonsWidget and AlignWidget snapshots mismatch in GHA [fosten]
 - Remove volto-form-block@3.17.1.patch [fosten]
